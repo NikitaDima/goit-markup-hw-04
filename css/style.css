@@ -13,6 +13,8 @@
     --desc-text-color: #757575;
     --accent-color: #2196F3;
     --section-content: 94px;
+    --icon-pramery-color: #757575;
+    --icon-accent-color: #2196F3;
 }
 
 
@@ -143,15 +145,38 @@ img {
 }
 
 .contacts .link {
+    display: flex;
+    
 
     color: var(--desc-text-color)
 }
 
+.icon-contacts {
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    fill: var(--icon-pramery-color);
+}
+
 .contacts .link:hover, 
 .link:focus{
-    
+
     color: var(--accent-color);
+    
 }
+
+.contacts .link:hover .icon-contacts {
+    fill: var(--icon-accent-color);
+}
+
+.contacts .link:focus .icon-contacts {
+    fill: var(--icon-accent-color);
+}
+
+/* .contacts .link:hover, 
+.link:focus .icon-contacts {
+    fill: var(--icon-accent-color);
+} */
 
 /* Стилізація героя головного контенту */
 

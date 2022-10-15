@@ -13,8 +13,10 @@
     --desc-text-color: #757575;
     --accent-color: #2196F3;
     --section-content: 94px;
-    --icon-pramery-color: #757575;
+    --icon-pramery-color: #AFB1B8;
     --icon-accent-color: #2196F3;
+    --icon-soc-footer: #ffffff;
+    --icon-bcg-color: #FFFFFF;
     --bcg-color-benefits: #F5F4FA;
 }
 
@@ -175,6 +177,7 @@ img {
 .main-hero {
     background-color: #2F303A;
     background-image: url("../images/Img-hero.jpg");
+    /* background: rgba(47, 48, 58, 0.4); */
     background-size: contain;
     padding: 200px 0;
 }
@@ -248,13 +251,16 @@ img {
 /* Стилізація іконок "Наші переваги" */
 
 .box-benefits {
+    max-width: 100%;   
+    height: 120px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
     background-color: var(--bcg-color-benefits)
     
 }
-
-/* .icon-benefits {
-   
-} */
 
 .subject {
     margin-bottom: 10px;
@@ -333,7 +339,8 @@ img {
 
 .conteiner-team {
     text-align: center;
-    padding: 30px 0;
+    padding-top: 30px;
+    margin-bottom: 16px;
 }
 
 
@@ -363,9 +370,8 @@ img {
 
     padding: 0;
     margin: 0;
+    margin-bottom: 30px;
 }
-
-.soc-item {}
 
 .soc-link {
     width: 44px;
@@ -374,20 +380,55 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-color: var(--title-text-color);
-    color: var(--icon-pramery-color);
+    background-color: var(--icon-bcg-color);
+    fill: var(--icon-pramery-color);
 }
 
-.soc-icon {
-    fill: currentColor;
-}
-
-.soc-link:hover {
+.soc-link:hover,
+.soc-link:focus {
     background-color: var(--icon-accent-color);
+    outline: none;
+    fill: var(--icon-bcg-color);
 }
 
-.soc-link:hover, .soc-icon {
-    fill: var(--title-text-color);
+/* Секція постійні клієнти */
+
+.title-clients {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1666em;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+}
+
+.list-clients {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.link-clients {
+    width: 170px;   
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+    border: 1px solid var(--icon-pramery-color);
+    border-radius: 4px;
+    fill: var(--icon-pramery-color);
+    background-color: var(--icon-bcg-color);
+}
+
+.link-clients:hover,
+.link-clients:focus
+ {
+    fill: var(--icon-accent-color);
+    outline: none;
+    border: 1px solid var(--icon-accent-color);
 }
 
 /* Стилі кнопок фільтра */
@@ -470,6 +511,13 @@ img {
     padding: 60px 0;
 }
 
+.box-footer {
+    display: flex;
+    align-items: baseline;
+    gap: 70px;
+
+}
+
 .conteiner-footer {
     margin-bottom: 20px;
 }
@@ -516,3 +564,39 @@ img {
 .address-link:focus {
     color: var(--accent-color)
 }
+
+.social-title {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.142em;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--title-text-color)
+    
+}
+
+.social-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-link {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    fill: var(--icon-soc-footer);
+}
+
+.social-link:hover, 
+.social-link:focus
+{
+    background-color: var(--icon-accent-color);
+}
+
